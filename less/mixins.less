@@ -17,3 +17,20 @@
   cursor: pointer;
   box-shadow: 1px 1px 1px @navigation-border;
 }
+
+.button-animation() {
+  animation-name: bttn-change;
+  animation-duration: 4s;
+
+  @keyframes bttn-change {
+    0% {
+      background-color: @button-bg;
+    }
+    50% {
+      background-color: #aad0a9;
+    }
+    100% {
+      background-color: @button-bg;
+    }
+  }
+}

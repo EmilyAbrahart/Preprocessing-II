@@ -322,6 +322,19 @@ img {
   text-align: center;
   cursor: pointer;
   box-shadow: 1px 1px 1px #C0C0C0;
+  animation-name: bttn-change;
+  animation-duration: 4s;
+}
+@keyframes bttn-change {
+  0% {
+    background-color: #17A2B8;
+  }
+  50% {
+    background-color: #aad0a9;
+  }
+  100% {
+    background-color: #17A2B8;
+  }
 }
 @media (max-width: 500px) {
   .home .content-pick {
