@@ -1,1 +1,17 @@
 // Navigation Styles here
+.nav-container {
+  .flex-baseline(row, space-evenly);
+  padding: 2rem;
+  border-bottom: 2px dashed @navigation-border;
+
+  nav {
+    .flex-baseline(row, space-evenly);
+
+    a {
+      text-decoration: none;
+      color: @shark;
+      font-size: 1.6rem;
+      padding: 1.5rem;
+    }
+  }
+}
