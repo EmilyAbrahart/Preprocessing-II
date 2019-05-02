@@ -27,6 +27,24 @@
         border-radius: 10px;
       }
     }
+
+    @media @mobile {
+      .flex(column, center, center);
+
+      .text-content {
+        width: 100%;
+      }
+
+      .img-content {
+        width: 100%;
+      }
+
+      &.inverse-content {
+        .img-content {
+          order: 2;
+        }
+      }
+    }
   }
 
   .inverse-content {
@@ -48,6 +66,10 @@
     width: 75%;
     margin: 0 auto 30px;
 
+    @media @mobile {
+      width: 100%;
+    }
+
     img {
       border-radius: 10px;
     }
@@ -65,6 +87,14 @@
 
       .btn {
         .button();
+      }
+    }
+
+    @media @mobile {
+      .flex(column, center, center);
+
+      .destination {
+        width: 75%;
       }
     }
   }
