@@ -18,7 +18,7 @@
   box-shadow: 1px 1px 1px @navigation-border;
 }
 
-.button-animation() {
+.button-animation(@colorChange) {
   animation-name: bttn-change;
   animation-duration: 4s;
 
@@ -27,7 +27,7 @@
       background-color: @button-bg;
     }
     50% {
-      background-color: #aad0a9;
+      background-color: @colorChange;
     }
     100% {
       background-color: @button-bg;
