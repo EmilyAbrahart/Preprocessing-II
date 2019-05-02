@@ -1,9 +1,12 @@
-.header-container {
-  
-}
-
-
 .home {
+  .header-container {
+    .flex(column, center, center);
+    border-bottom: 2px dashed @navigation-border;
+
+    header {
+      margin: 30px 0;
+    }
+  }
 
   .content-section {
     margin: 30px 0;
@@ -11,8 +14,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
-    
     .text-content {
       width: 48%;
       padding-right: 1%;
@@ -61,6 +62,10 @@
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      .btn {
+        .button();
+      }
     }
   }
-}// home
+} // home
