@@ -1,4 +1,12 @@
 .home {
+  .header-container {
+    .flex(column, center, center);
+    border-bottom: 2px dashed @navigation-border;
+
+    header {
+      margin: 30px 0;
+    }
+  }
 
   .content-section {
     margin: 30px 0;
@@ -6,8 +14,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
-    
     .text-content {
       width: 48%;
       padding-right: 1%;
@@ -19,6 +25,24 @@
 
       img {
         border-radius: 10px;
+      }
+    }
+
+    @media @mobile {
+      .flex(column, center, center);
+
+      .text-content {
+        width: 100%;
+      }
+
+      .img-content {
+        width: 100%;
+      }
+
+      &.inverse-content {
+        .img-content {
+          order: 2;
+        }
       }
     }
   }
@@ -42,6 +66,10 @@
     width: 75%;
     margin: 0 auto 30px;
 
+    @media @mobile {
+      width: 100%;
+    }
+
     img {
       border-radius: 10px;
     }
@@ -50,12 +78,71 @@
   .content-pick {
     padding-top: 30px;
     border-top: 2px dashed @navigation-border;
+    border-bottom: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      .btn {
+        .button();
+        .button-animation(#aad0a9);
+      }
+    }
+
+    @media @mobile {
+      .flex(column, center, center);
+
+      .destination {
+        width: 75%;
+      }
     }
   }
-}// home
+  .form {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    .flex(column, center, center);
+
+    form {
+      .flex(column, center, center);
+      width: 100%;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem 3rem;
+        width: 100%;
+
+        @media @mobile {
+          padding: 1rem;
+        }
+      }
+
+      div:last-child {
+        margin-bottom: 2.5rem;
+      }
+
+      input,
+      textarea {
+        border: 0.1rem solid black;
+        border-radius: 0.4rem;
+        padding: 0.6rem;
+      }
+
+      input {
+        width: 80%;
+      }
+
+      textarea {
+        height: 8rem;
+      }
+    }
+
+    .btn {
+      .button;
+    }
+  }
+} // home

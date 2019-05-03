@@ -1,1 +1,36 @@
 // Mixins in here
+
+.flex(@flexDir, @justContent, @alignItems) {
+  display: flex;
+  flex-direction: @flexDir;
+  justify-content: @justContent;
+  align-items: @alignItems;
+}
+
+.button() {
+  font-size: 1.6rem;
+  background-color: @button-bg;
+  color: @white;
+  padding: 1rem 3rem;
+  border-radius: 1rem;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px @navigation-border;
+}
+
+.button-animation(@colorChange) {
+  animation-name: bttn-change;
+  animation-duration: 4s;
+
+  @keyframes bttn-change {
+    0% {
+      background-color: @button-bg;
+    }
+    50% {
+      background-color: @colorChange;
+    }
+    100% {
+      background-color: @button-bg;
+    }
+  }
+}
